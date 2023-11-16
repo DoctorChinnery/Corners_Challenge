@@ -11,8 +11,7 @@ train_15['MatchId'] = train_15['MatchId']
 train_15['HomeTeamId'] = train_15['HomeTeamId'].astype('category')
 train_15['AwayTeamId'] = train_15['AwayTeamId'].astype('category')
 train_15['LeagueId'] = train_15['LeagueId'].astype('category')
-train_15['Over_10_Corners'] = np.where(train_15['Total_Corners'] > 10, 1, 0)
-train_15['Over_10_Corners'] = train_15['Over_10_Corners'].astype('category')
+
 
 
 # Find last three game home and away goals:
