@@ -27,4 +27,4 @@ model = GridSearchCV(model, {'max_depth': [2, 4, 6, 8], 'n_estimators': [50, 100
 model.fit(X_train, y_train)
 predictions = model.predict(X_test)
 pred_prob = model.predict_proba(X_test)
-print("accuracy::", accuracy_score(y_test, predictions))
+print("Accuracy = {}%".format(np.round(accuracy_score(y_test, predictions),3) * 100))
