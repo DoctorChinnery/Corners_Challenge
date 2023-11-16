@@ -21,6 +21,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1, test_s
 train_dataset = cb.Pool(data=X_train, label=y_train)
 test_dataset = cb.Pool(data=X_test, label=y_test)
 # Construct model:
+
 model = cb.CatBoostClassifier(loss_function='Logloss', verbose=True)
 model = GridSearchCV(model, {'iterations': [100, 500, 1000, 2000], 'depth': [3,6,9], 'learning_rate': [0.001, 0.01, 0.1]}, scoring='accuracy')
 
