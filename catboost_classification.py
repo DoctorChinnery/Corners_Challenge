@@ -11,7 +11,7 @@ train_15['Over_10_Corners'] = np.where(train_15['Total_Corners'] > 11.5, 1, 0)
 train_15['Over_10_Corners'] = train_15['Over_10_Corners'].astype('category')
 
 # Select training features:
-X = train_15[['HomeTeamId', 'AwayTeamId', 'LeagueId', 'Home_last_3_goals', 'Away_last_3_goals', 'Home_last_3_corners',
+X = train_15[['Home_last_3_goals', 'Away_last_3_goals', 'Home_last_3_corners',
               'Away_last_3_corners', 'League_Average_Corners']]
 y = train_15['Over_10_Corners']
 
