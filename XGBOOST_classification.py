@@ -7,7 +7,7 @@ from sklearn.model_selection import GridSearchCV
 
 # Read in the data edited and formatted by build_train_data.py:
 train_15 = pd.read_csv(r'train (15) processed.csv')
-train_15['Over_10_Corners'] = np.where(train_15['Total_Corners'] > 10, 1, 0)
+train_15['Over_10_Corners'] = np.where(train_15['Total_Corners'] > 11.5, 1, 0)
 train_15['Over_10_Corners'] = train_15['Over_10_Corners'].astype('category')
 
 # Select training features:
